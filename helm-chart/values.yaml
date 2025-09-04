@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: simple-app
+  tag: "1.0.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  className: nginx
+  host: simple-app.local
+  path: /
